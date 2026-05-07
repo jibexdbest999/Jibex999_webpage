@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { RingLoader } from 'react-spinners'
 import Footer from "../Footer"
-import huddlePageDp from "../../assets/huddlePageDp.png"
+import HuddlePageDp from "../../assets/HuddlePageDp.png"
 import TaskDutyDp from "../../assets/TaskDutyDp (2).png"
 import StudentLoginDp from "../../assets/StudentLoginDp.png"
 import DigitalBankDp from "../../assets/DigitalBankDp.png"
@@ -81,7 +81,7 @@ export default function FrontendPage() {
 
           <div className='flex flex-col border-t-5 border-b-5 border-gray-800 rounded-md px-5 pt-5 pb-2 '>
             <div className='flex flex-col items-center'>
-              <img src={huddlePageDp} alt="" />
+              <img src={HuddlePageDp} alt="" />
             <h2 className='font-semibold text-[15px] md:text-2xl mb-2 md:mb-3 mt-[-25px]'>Huddle Landing Page</h2>
             <Link to="https://huddle-page1-xi.vercel.app/" className='bg-cyan-500 hover:bg-cyan-500/40 rounded-full px-5 py-1.5 font-semibold cursor-pointer w-55 text-center'>Explore Project</Link>
             </div>
