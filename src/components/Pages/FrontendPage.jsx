@@ -64,6 +64,23 @@ export default function FrontendPage() {
     }
   };
 
+  const shareProject = async (project) => {
+  try {
+    if (navigator.share) {
+      await navigator.share({
+        title: project.title,
+        text: `Check out this project: ${project.title}`,
+        url: project.link,
+      });
+    } else {
+      await navigator.clipboard.writeText(project.link);
+      alert("Sharing not supported. Link copied instead.");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
   useEffect(() => {
     const timer = setTimeout(() => setPageIsLoading(false), 1000);
     return () => clearTimeout(timer);
@@ -133,7 +150,10 @@ export default function FrontendPage() {
                   )}
                 </button>
 
-                <button className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full">
+                <button
+                  onClick={() => shareProject(project)}
+                  className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full"
+                >
                   <FaRegShareFromSquare size={15} />
                 </button>
               </div>

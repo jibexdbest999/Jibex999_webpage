@@ -40,6 +40,7 @@ export default function EndsModal({ onClose }) {
           </Link>
 
           <Link 
+            to="/fullstackprojects"
             onClick={onClose}
             className="bg-green-800 hover:bg-green-900/50 py-2 rounded-lg text-white">
             Full Stack Projects

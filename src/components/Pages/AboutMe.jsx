@@ -85,7 +85,7 @@ const itemVariant = {
         variants={itemVariant}
         className="text-2xl font-semibold mb-5 text-center"
       >
-        Building FAst, Modern Web Experiences Using:
+        Building Fast, Modern Web Experiences Using:
       </motion.h2>
 
       <div className="grid sm:grid-cols-2 gap-6">

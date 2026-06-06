@@ -7,6 +7,7 @@ import AboutMe from './components/Pages/AboutMe'
 import ContactMe from './components/Pages/ContactMe'
 import NavBar from './components/NavBar'
 import FrontendPage from './components/Pages/FrontendPage'
+import FullstackPage from './components/Pages/FullstackPage'
 import UnsubscribeComfirmationModal from './components/Pages/UnsubscribeComfirmationModal'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <Route path='/contact' element={<ContactMe/>}/>
       <Route path='/about' element={<AboutMe/>}/>
       <Route path='/frontendprojects' element={<FrontendPage/>}/>
+      <Route path='/fullstackprojects' element={<FullstackPage/>}/>
       <Route path='/unsubscribeconfirmation' element={<UnsubscribeComfirmationModal/>}/>
     </Routes>
     </>
