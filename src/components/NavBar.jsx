@@ -35,7 +35,7 @@ export default function NavBar({ openProjectsModal }) {
   return (
     <div>
       <nav className="flex fixed top-0 z-50 w-full h-20 lg:h-25 bg-linear-to-b from-[#000000] via-gray-800 to-gray-900 rounded-b-lg text-cyan-500 items-center px-4 sm:px-10 justify-between">
-        <img className="w-50 lg:w-70 pt-4 ml-[-40px]" src={NewLogo} alt="" />
+        <img className="w-50 lg:w-70 pt-4 ml-[-40px]" src={NewLogo} alt="Jibex999 logo" />
 
         <div className="hidden md:flex  sm:gap-15   font-semibold mr-5 ">
           <NavLink
