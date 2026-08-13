@@ -103,6 +103,16 @@ export default function FrontendPage() {
           Frontend Projects
         </h1>
 
+        <span className="block w-full mx-auto mt-3">
+          <marquee
+            className="text-center text-sm md:text-lg lg:text-xl font-medium text-gray-400"
+            behavior="scroll"
+            direction="left"
+          >
+            Kindly subscribe to get updated, More projects are coming soon!!!
+          </marquee>
+        </span>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-x-10 my-5 ">
           {frontendProjects.map((project, index) => (
             <div
