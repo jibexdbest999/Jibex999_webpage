@@ -90,7 +90,7 @@ export default function FrontendPage() {
     return (
       <div className="flex flex-col mx-auto items-center justify-center h-screen">
         <RingLoader color="#0360ff" size={80} />
-        <p className="text-lg lg:text-3xl pt-2 font-semibold text-cyan-600">
+        <p className="text-lg lg:text-3xl pt-2 font-semibold text-blue-700">
           Loading...
         </p>
       </div>
@@ -98,14 +98,14 @@ export default function FrontendPage() {
 
   return (
     <div>
-      <div className="text-white mt-28 mx-5 py-5 px-5">
-        <h1 className="text-center text-3xl font-semibold">
-          Frontend Projects
+      <div className="text-gray-900 dark:text-white mt-20 mx-5 py-5 px-5">
+        <h1 className="text-center text-3xl font-semibold text-blue-700">
+          Solo Projects
         </h1>
 
         <span className="block w-full mx-auto mt-3">
           <marquee
-            className="text-center text-sm md:text-lg lg:text-xl font-medium text-gray-400"
+            className="text-center text-sm md:text-lg lg:text-xl font-medium text-gray-500 dark:text-gray-300"
             behavior="scroll"
             direction="left"
           >
@@ -117,12 +117,14 @@ export default function FrontendPage() {
           {frontendProjects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col border-t-5 border-b-5 border-gray-800 rounded-md px-5 py-5"
+              className="flex flex-col bg-gray-50 dark:bg-[#0B0F14]/50
+                border-t-5 border-b-5 border-blue-700 rounded-md px-5 py-5
+                transition-colors duration-300"
             >
               <div className="flex flex-col items-center">
                 <img src={project.image} alt={project.title} />
 
-                <h2 className="font-semibold text-[15px] md:text-2xl mb-2 md:mb-3 mt-[-25px]">
+                <h2 className="font-semibold text-[15px] md:text-2xl mb-2 md:mb-3 mt-[-25px] text-gray-800 dark:text-gray-300">
                   {project.title}
                 </h2>
 
@@ -130,28 +132,28 @@ export default function FrontendPage() {
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-cyan-500 hover:bg-cyan-500/40 rounded-full px-5 py-1.5 font-semibold cursor-pointer w-55 text-center"
+                  className="bg-blue-700 hover:bg-blue-900 rounded-full px-5 py-1.5 font-semibold cursor-pointer w-55 text-center text-gray-100"
                 >
                   Visit Webpage
                 </a>
               </div>
 
               <div className="flex gap-1 md:gap-2 pt-2 ml-2 items-center">
-                <button className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full">
+                <button className="cursor-pointer hover:bg-gray-700/50 hover:p-1 p-1 hover:rounded-full text-blue-700">
                   <AiOutlineLike size={16.5} />
                 </button>
 
-                <button className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full">
+                <button className="cursor-pointer hover:bg-gray-700/50 hover:p-1 p-1 hover:rounded-full text-blue-700">
                   <FaRegHeart size={14} />
                 </button>
 
-                <button className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full">
+                <button className="cursor-pointer hover:bg-gray-700/50 hover:p-1 p-1 hover:rounded-full text-blue-700">
                   <AiOutlineDislike size={16.5} />
                 </button>
 
                 <button
                   onClick={() => copyProjectLink(project.link)}
-                  className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full"
+                  className="cursor-pointer hover:bg-gray-700/50 hover:p-1 p-1 hover:rounded-full text-blue-700"
                 >
                   {copied === project.link ? (
                     <IoMdCheckmark size={18} className="text-cyan-500" />
@@ -162,14 +164,14 @@ export default function FrontendPage() {
 
                 <button
                   onClick={() => shareProject(project)}
-                  className="cursor-pointer hover:bg-gray-500 hover:p-1 p-1 hover:rounded-full"
+                  className="cursor-pointer hover:bg-gray-700/50 hover:p-1 p-1 hover:rounded-full text-blue-700"
                 >
                   <FaRegShareFromSquare size={15} />
                 </button>
               </div>
 
               {copied === project.link && (
-                <p className="text-green-400 text-sm mt-2 ml-2">Link copied!</p>
+                <p className="text-green-400 font-semibold text-sm mt-2 ml-2">Link copied!</p>
               )}
             </div>
           ))}

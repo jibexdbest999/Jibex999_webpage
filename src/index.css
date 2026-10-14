@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .text-glow {
   text-shadow: 0 0 10px rgb(6, 2, 252),
     0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2);
@@ -13,8 +15,8 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #0b0f14, #0e131a, #000000);
-  height: full;
+  background-color: black;
+  min-height: 100vh;
 }
 
 @keyframes scaleFade {

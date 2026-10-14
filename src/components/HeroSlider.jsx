@@ -23,7 +23,7 @@ const slides = [
 export default function HeroSlider() {
 
   return (
-     <div className="relative h-[35vh] md:h-[40vh] lg:h-[45vh] overflow-hidden">
+     <div className="relative w-full rounded-[35px] h-[300px] sm:h-[350px] md:h-[370px] lg:h-[390px] xl:h-[400px] overflow-hidden">
       {/* GLOBAL SPARKLES */}
       <SparkLayer />
 
@@ -34,24 +34,25 @@ export default function HeroSlider() {
         slidesPerView={1}
         speed={800}
         autoplay={{ 
-          delay: 3000, 
+          delay: 2000, 
           disableOnInteraction: false 
         }}
-        pagination={{ clickable: true }}
+      //  { pagination={{ clickable: false }}}
         loop
+        className="h-full"
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.title}>
-            <div className="h-[50vh] flex items-center justify-center text-center text-white">
+          <SwiperSlide key={slide.title} className="h-full">
+            <div className="h-full flex items-center justify-center text-center text-white bg-black/70 px-5">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeInOut" }}
               >
-                <h1 className="text-[22px] md:text-6xl font-extrabold text-glow">
+                <h1 className="text-[22px] md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-glow">
                   {slide.title}
                 </h1>
-                <p className="text-sm md:text-2xl mt-2 text-glow">
+                <p className="text-sm md:text-[15px] lg:text-2xl mt-2 text-glow">
                   {slide.subtitle}
                 </p>
               </motion.div>

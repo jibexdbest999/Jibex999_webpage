@@ -18,21 +18,21 @@ function App() {
   }, [showModal])
 
   return (
-    <>
-    {showModal && <EndsModal onClose={() => setShowModal(false)} />}
+    <div className="min-h-screen bg-white text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+      {showModal && <EndsModal onClose={() => setShowModal(false)} />}
 
-      <NavBar openProjectsModal={() => setShowModal(true)} />
+        <NavBar openProjectsModal={() => setShowModal(true)} />
 
-    <Routes>
-      <Route path='/' 
-        element={<Home openProjectsModal={() => setShowModal(true)} />}/>
-      <Route path='/contact' element={<ContactMe/>}/>
-      <Route path='/about' element={<AboutMe/>}/>
-      <Route path='/frontendprojects' element={<FrontendPage/>}/>
-      <Route path='/fullstackprojects' element={<FullstackPage/>}/>
-      <Route path='/unsubscribeconfirmation' element={<UnsubscribeComfirmationModal/>}/>
-    </Routes>
-    </>
+          <Routes>
+            <Route path='/' 
+              element={<Home openProjectsModal={() => setShowModal(true)} />}/>
+                <Route path='/contact' element={<ContactMe/>}/>
+                <Route path='/about' element={<AboutMe/>}/>
+                <Route path='/soloprojects' element={<FrontendPage/>}/>
+                <Route path='/teamprojects' element={<FullstackPage/>}/>
+                <Route path='/unsubscribeconfirmation' element={<UnsubscribeComfirmationModal/>}/>
+          </Routes>
+    </div>
   )
 }
 

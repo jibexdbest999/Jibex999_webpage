@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import Body from "./Body";
 import UnsubscribeConfirmationModal from "./Pages/UnsubscribeComfirmationModal";
 import { RingLoader } from "react-spinners";
+import { AbtPreview } from "./AbtPreview";
+import { ContPreview } from "./ContPreview";
 
 export default function Home({ openProjectsModal }) {
 
@@ -29,16 +31,28 @@ const [pageIsLoading, setPageIsLoading] = useState(true)
   }, []);
 
   if (pageIsLoading) return <div className='flex flex-col mx-auto items-center justify-center h-screen'>
-      <RingLoader color="#0360ff" size={80} />
-      <p className='text-lg lg:text-3xl pt-2 font-semibold text-cyan-600'>Loading...</p>
+      <RingLoader color="#1D4ED8" size={80} />
+      <p className='text-lg lg:text-3xl pt-2 font-semibold text-blue-700'>Loading...</p>
     </div>
 
   return (
-    <div>
+    <div className="w-full mx-auto ">
     
-      <HeroSlider />
+      <div className="flex flex-col md:flex-row w-full pt-23 items-center ">
 
-      <Body openProjectsModal={openProjectsModal} />
+        <div className="w-full md:w-1/2">
+          <Body openProjectsModal={openProjectsModal} />
+        </div>
+
+        <div className="w-full md:w-1/2 p-6">
+          <HeroSlider />
+        </div>
+        
+      </div>
+
+      <AbtPreview/>
+
+      <ContPreview/>
           
       <Footer/>    
 

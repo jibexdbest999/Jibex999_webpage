@@ -109,18 +109,18 @@ export default function Footer() {
 
 
   const hoverAnim = {
-  scale: 1.08,
-  borderColor: "#dc2626", // red-600
-  color: "#dc2626",
+  scale: 1.12,
+  borderColor: "#1e3a8a", // blue-900
+  color: "#1e3a8a", // blue-900
 };
 
   return (
-    <div className="bg-gray-900/30  items-center text-center py-3 text-gray-300 ">
+    <div className="border-t-1 border-gray-200 backdrop-blur-md items-center text-center py-5 text-gray-300 ">
       <Toaster position="top-center" />
       <form onSubmit={handleSubmit}>
-        <h1 className="text-gray-200 pb-2 font-semibold text-[15px] md:text-[18px]">Kindly subscribe to get updated for new arrivals...</h1>
+        <h1 className="text-blue-700 pb-2 font-semibold text-[15px] md:text-[18px]">Kindly subscribe to get updated for new arrivals...</h1>
       <div className="">
-        <input onChange={handleChange} value={userEmail.email} name="email" type="email" className="border rounded-md bg-gray-700 h-8 w-60 md:h-10 md:w-80 px-1 pb-0.5 mb-1.5 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0" placeholder="Enter email address" />
+        <input onChange={handleChange} value={userEmail.email} name="email" type="email" className="border border-blue-700 rounded-md bg-gray-700 h-8 w-60 md:h-10 md:w-80 px-1 pb-0.5 mb-1.5 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0" placeholder="Enter email address" />
         {error && <p className="text-red-600 font-semibold">{error}</p>}
         <motion.button
           type="submit"
@@ -133,7 +133,7 @@ export default function Footer() {
         ${
           isSuccess
           ? "bg-green-600 border-green-600 text-white shadow-green-600/30"
-          : "bg-cyan-500 border-cyan-500 hover:bg-cyan-700 hover:border-cyan-700 text-white"
+          : "bg-blue-700 border-blue-700 hover:bg-blue-900 hover:border-blue-900 text-white"
         }
         ${isSubmitting ? "opacity-80 cursor-not-allowed" : ""}
         `}
@@ -158,10 +158,10 @@ export default function Footer() {
 
       <div className="">
         <div className="py-2">
-          <h3 className="text-gray-400">Tech Stack:</h3>
+          <h3 className="text-gray-500 text-lg font-semibold">Tech Stack:</h3>
 
-        <div className="grid text-gray-400 md:grid-cols-4 md:space-y-2 place-items-center mx-auto ">
-  <motion.div whileHover={hoverAnim} >
+        <div className="grid text-blue-700 md:grid-cols-4 md:space-y-2 place-items-center mx-auto ">
+          <motion.div whileHover={hoverAnim} >
     <Link
       to="https://en.wikipedia.org/wiki/JavaScript"
       className="border border-transparent rounded-md px-2 py-1 transition-colors"
@@ -173,7 +173,7 @@ export default function Footer() {
   <motion.div whileHover={hoverAnim} >
     <Link
       to="https://tailwindcss.com/"
-      className="border border-transparent rounded-md px-2 py-1"
+      className="border border-transparent rounded-md px-2 py-1 text-blue-700"
     >
       TailwindCss
     </Link>
@@ -182,7 +182,7 @@ export default function Footer() {
   <motion.div whileHover={hoverAnim}>
     <Link
       to="https://react.dev/"
-      className="border border-transparent rounded-md px-2 py-1"
+      className="border border-transparent rounded-md px-2 py-1 text-blue-700"
     >
       React.js
     </Link>
@@ -191,7 +191,7 @@ export default function Footer() {
   <motion.div whileHover={hoverAnim}>
     <Link
       to="https://legacy.reactjs.org/docs/react-dom.html"
-      className="border border-transparent rounded-md px-2 py-1"
+      className="border border-transparent rounded-md px-2 py-1 text-blue-700"
     >
       ReactDom
     </Link>
@@ -209,7 +209,7 @@ export default function Footer() {
   <motion.div whileHover={hoverAnim}>
     <Link
       to="https://swiperjs.com/"
-      className="border border-transparent rounded-md px-2 py-1"
+      className="border border-transparent rounded-md px-2 py-1 text-blue-700"
     >
       Swiper.js
     </Link>
@@ -218,7 +218,7 @@ export default function Footer() {
   <motion.div whileHover={hoverAnim} >
     <Link
       to="https://www.mongodb.com/"
-      className="border border-transparent rounded-md px-2 py-1"
+      className="border border-transparent rounded-md px-2 py-1 text-blue-700"
     >
       MongoDB 
     </Link>
@@ -237,7 +237,7 @@ export default function Footer() {
 
         </div>
         
-        <div className="text-gray-500 ">
+        <div className="text-gray-500 font-medi ">
           <p className="text-[15px]">@2026 Jibex999_web</p>
           <p className="text-[14px]">All rights reserved.</p>
         </div>

@@ -20,7 +20,7 @@ export default function SparkLayer() {
       {sparkles.map((s, i) => (
         <motion.span
           key={i}
-          className="absolute rounded-full bg-white opacity-70"
+          className="absolute rounded-full bg-blue-700 opacity-70"
           style={{
             top: `${s.top}%`,
             left: `${s.left}%`,
