@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import { ScrollToTop } from './components/ScrollToTop'
 import Home from './components/Home'
 import EndsModal from './components/Pages/EndsModal'
 import AboutMe from './components/Pages/AboutMe'
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+      <ScrollToTop/>
       {showModal && <EndsModal onClose={() => setShowModal(false)} />}
 
         <NavBar openProjectsModal={() => setShowModal(true)} />
