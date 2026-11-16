@@ -17,22 +17,22 @@ export default function AboutMe() {
     </div>
 
       const sectionVariant = {
-  hidden: { opacity: 60, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-      staggerChildren: 0.15,
-    },
-  },
-}
+        hidden: { opacity: 60, y: 20 },
+        visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        staggerChildren: 0.15,
+          },
+        },
+      }
 
-const itemVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-}
+      const itemVariant = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 },
+      }
 
     return (
     <>

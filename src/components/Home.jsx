@@ -6,6 +6,8 @@ import UnsubscribeConfirmationModal from "./Pages/UnsubscribeComfirmationModal";
 import { RingLoader } from "react-spinners";
 import { AbtPreview } from "./AbtPreview";
 import { ContPreview } from "./ContPreview";
+import { PortPreview } from "./PortPreview";
+
 
 export default function Home({ openProjectsModal }) {
 
@@ -38,7 +40,9 @@ const [pageIsLoading, setPageIsLoading] = useState(true)
   return (
     <div className="w-full mx-auto ">
     
-      <div className="flex flex-col md:flex-row w-full pt-23 items-center ">
+      <div
+        className="flex flex-col md:flex-row w-full pt-23 items-center"
+      >
 
         <div className="w-full md:w-1/2">
           <Body openProjectsModal={openProjectsModal} />
@@ -50,10 +54,12 @@ const [pageIsLoading, setPageIsLoading] = useState(true)
         
       </div>
 
+      <PortPreview openProjectsModal={openProjectsModal} />
+
       <AbtPreview/>
 
       <ContPreview/>
-          
+
       <Footer/>    
 
        {showUnsubModal && (

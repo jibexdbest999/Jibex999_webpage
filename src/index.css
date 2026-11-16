@@ -29,3 +29,28 @@ body {
     transform: scale(1);
   }
 }
+
+/* Portfolio horizontal scrollbar */
+
+.portfolio-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #1d4ed8 #d1d5db;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+  height: 7px;
+}
+
+.portfolio-scroll::-webkit-scrollbar-track {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+.portfolio-scroll::-webkit-scrollbar-thumb {
+  background: #1d4ed8;
+  border-radius: 10px;
+}
+
+.portfolio-scroll::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}

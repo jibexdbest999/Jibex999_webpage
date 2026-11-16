@@ -97,7 +97,7 @@ export default function NavBar({ openProjectsModal }) {
 
         
           <div className="flex items-center gap-5">
-          <div className="hidden border-2 border-gray-400/30 rounded-full">
+          <div className="hidden md:block border-2 border-gray-400/30 rounded-full">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="w-9 h-9 flex items-center justify-center rounded-full 
@@ -121,7 +121,7 @@ export default function NavBar({ openProjectsModal }) {
           </div>
         </div>
 
-        <div className="hidden border-2 border-gray-400/30 rounded-full">
+        <div className="block md:hidden border-2 border-gray-400/30 rounded-full">
             <button
               onClick={() => setDarkMode(!darkMode)}
               className="w-9 h-9 flex items-center justify-center rounded-full 
